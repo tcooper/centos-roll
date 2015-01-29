@@ -1,0 +1,7 @@
+<roll name="CentOS" interface="4.0">
+	<timestamp time="10:21:43" date="Nov 10 2014" tz="PST"/>
+	<color edge="lawngreen" node="lawngreen"/>
+	<info version="6.5" release="0" arch="x86_64"/>
+	<iso maxsize="0" bootable="0" mkisofs=""/>
+	<rpm rolls="0" bin="1" src="0"/>/
+</roll>
