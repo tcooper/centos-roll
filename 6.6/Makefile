@@ -4,7 +4,7 @@ default: mirrorupdates
 
 # Create the Base OS Roll
 mirrorbase:
-	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(BASEPATH) arch=$(ARCH) rollname=$(DISTRO) version=$(VERSION)
+	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(BASEPATH) arch=$(ARCH) rollname=$(DISTRO) version=$(VERSION) release=$(DATE)
 
 # Add the Base OS Roll to distro
 installbase: mirrorbase
@@ -16,7 +16,7 @@ installbase: mirrorbase
 # Mirror Updates
 mirrorupdates: 
 	- /bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
-	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO)-$(VERSION) version="`date +%Y.%m.%d`"
+	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO) version=$(VERSION) release=$(DATE)
 
 # Add updates to distro
 installupdates: cleanupdates mirrorupdates
