@@ -18,18 +18,18 @@ mirrorupdates:
 	- /bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
 	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO) version=$(VERSION) release=$(DATE)
 
+# Remove All Previous Updates Rolls
+cleanupdates:
+	- /sbin/service httpd stop
+	- /opt/rocks/bin/rocks remove roll Updates-$(DISTRO)-$(VERSION) arch=$(ARCH)
+	- /sbin/service httpd start
+
 # Add updates to distro
 installupdates: cleanupdates mirrorupdates
 	- /sbin/service httpd stop
 	/opt/rocks/bin/rocks add roll Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
 	/opt/rocks/bin/rocks enable roll Updates-$(DISTRO)-$(VERSION)
 	-/sbin/service httpd start
-
-# Remove All Previous Updates Rolls
-cleanupdates:
-	- /sbin/service httpd stop
-	- /opt/rocks/bin/rocks remove roll Updates-$(DISTRO)-$(VERSION) arch=$(ARCH)
-	- /sbin/service httpd start
 
 testing:
 	echo "arch is " $(ARCH)
