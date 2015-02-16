@@ -1,5 +1,5 @@
 <roll name="CentOS" interface="4.0">
-	<timestamp time="11:26:40" date="Jan 29 2015" tz="PST"/>
+	<timestamp time="12:08:05" date="Jan 29 2015" tz="PST"/>
 	<color edge="lawngreen" node="lawngreen"/>
 	<info version="6.6" release="0" arch="x86_64"/>
 	<iso maxsize="0" bootable="0" mkisofs=""/>
