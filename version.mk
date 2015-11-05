@@ -3,7 +3,7 @@ ARCH          = x86_64
 VERSION       = 6.6
 DATE         :=$(shell date +%Y.%m.%d)
 ifndef MIRRORURL
-  MIRRORURL   =http://mirror.hmc.edu/centos
+  MIRRORURL   =http://vault.centos.org
 endif
 BASEPATH      = $(VERSION)/os/$(ARCH)/Packages
 UPDATESPATH   = $(VERSION)/updates/$(ARCH)/Packages
