@@ -1,7 +1,7 @@
 <roll name="CentOS" interface="4.0">
-	<timestamp time="12:18:19" date="Sep 01 2015" tz="PDT"/>
+	<timestamp time="11:53:02" date="Jun 06 2016" tz="PDT"/>
 	<color edge="lawngreen" node="lawngreen"/>
-	<info version="6.7" release="2015.09.01" arch="x86_64"/>
+	<info version="6.7" release="2016.06.06" arch="x86_64"/>
 	<iso maxsize="0" bootable="0" mkisofs=""/>
 	<rpm rolls="0" bin="1" src="0"/>/
 </roll>

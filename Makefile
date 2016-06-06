@@ -33,5 +33,5 @@ installupdates: cleanupdates mirrorupdates
 
 testing:
 	echo "arch is " $(ARCH)
-	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-6-6.el6.centos.12.2.x86_64.rpm
+	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-6-7.el6.centos.12.3.x86_64.rpm
 	curl -I $(MIRRORURL)/$(UPDATESPATH)/virt-p2v-0.9.1-2.20130730.1.el6.centos.noarch.rpm
