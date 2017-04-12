@@ -33,5 +33,5 @@ installupdates: cleanupdates mirrorupdates
 
 testing:
 	echo "arch is " $(ARCH)
-	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-6-8.el6.centos.12.3.x86_64.rpm
-	curl -I $(MIRRORURL)/$(UPDATESPATH)/kernel-2.6.32-642.1.1.el6.x86_64.rpm
+	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-6-9.el6.12.3.x86_64.rpm
+	curl -I $(MIRRORURL)/$(UPDATESPATH)/curl-7.19.7-53.el6_9.x86_64.rpm
