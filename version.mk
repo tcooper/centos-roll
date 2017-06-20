@@ -1,6 +1,6 @@
 DISTRO        = CentOS
 ARCH          = x86_64
-VERSION       = 6.9
+VERSION       = 7.3.1611
 DATE         :=$(shell date +%Y.%m.%d)
 ifndef MIRRORURL
   MIRRORURL   =http://mirror.hmc.edu/centos
