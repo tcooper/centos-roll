@@ -7,9 +7,9 @@ CentOS release and updates repository that you choose.
 
 ## Versions Supported
 
-Each release of Rocks is targetted at a specific version of CentOS. The 
-following table illustrates the association of the recent Rocks/CentOS 
-releases and whether (or not) building CentOS/Updates-CentOS isos for that 
+Each release of Rocks is targetted at a specific version of CentOS. The
+following table illustrates the association of the recent Rocks/CentOS
+releases and whether (or not) building CentOS/Updates-CentOS isos for that
 version of Rocks is supported by this repository...
 
 ```
@@ -20,4 +20,9 @@ version of Rocks is supported by this repository...
     Rocks 6.1.1 (Sand Boa)   -  CentOS 6.5  -  Supported in the 6.5 branch
     Rocks 6.1 (Emerald Boa)  -  CentOS 6.4  -  Unsupported
 ```
+
+## Usage
+
+Simply checkout the branch for the version of CentOS that you want to build
+base or updates rolls for and do the following...
 
