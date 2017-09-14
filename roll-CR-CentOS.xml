@@ -1,0 +1,7 @@
+<roll name="CR-CentOS" interface="4.0">
+	<timestamp time="21:26:51" date="Sep 07 2017" tz="PDT"/>
+	<color edge="lawngreen" node="lawngreen"/>
+	<info version="7.3.1611" release="2017.09.07" arch="x86_64"/>
+	<iso maxsize="0" bootable="0" mkisofs=""/>
+	<rpm rolls="0" bin="1" src="0"/>/
+</roll>
