@@ -7,3 +7,4 @@ ifndef MIRRORURL
 endif
 BASEPATH      = $(VERSION)/os/$(ARCH)/Packages
 UPDATESPATH   = $(VERSION)/updates/$(ARCH)/Packages
+CRPATH        = $(VERSION)/cr/$(ARCH)/Packages

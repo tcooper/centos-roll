@@ -18,6 +18,11 @@ mirrorupdates:
 	- /bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
 	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO) version=$(VERSION) release=$(DATE)
 
+# Mirror CR
+mirrorcr: 
+	- /bin/rm CR-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
+	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(CRPATH) arch=$(ARCH) rollname=CR-$(DISTRO) version=$(VERSION) release=$(DATE)
+
 # Remove All Previous Updates Rolls
 cleanupdates:
 	- /sbin/service httpd stop
