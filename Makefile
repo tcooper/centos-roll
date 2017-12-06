@@ -1,6 +1,6 @@
 include version.mk
 
-default: mirrorupdates
+default: mirrorupdatesrocks7
 
 # Create the Base OS Roll
 mirrorbase:
@@ -17,6 +17,11 @@ installbase: mirrorbase
 mirrorupdates: 
 	- /bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
 	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO) version=$(VERSION) release=$(DATE)
+
+# Mirror Updates Rocks7 Style
+mirrorupdatesrocks7:
+	- /bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
+	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO)-$(VERSION) version=$(DATE) release=0
 
 # Mirror CR
 mirrorcr: 
