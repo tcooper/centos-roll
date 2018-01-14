@@ -16,7 +16,7 @@ installbase: mirrorbase
 # Mirror Updates
 mirrorupdates: 
 	- /bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
-	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO) version=$(VERSION) release=$(DATE)
+	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO)-$(VERSION) version=$(DATE)
 
 # Remove All Previous Updates Rolls
 cleanupdates:
