@@ -13,6 +13,7 @@ releases and whether (or not) building CentOS/Updates-CentOS ISOs for that
 version of Rocks is supported by this repository...
 
 ```
+    Rocks 7.0 (Manzanita)    -  CentOS 7.5.1804  -  Supported in the 7.5.1804 branch
     Rocks 7.0 (Manzanita)    -  CentOS 7.4.1708  -  Supported in the 7.4.1708 branch
     Rocks 6.2 (Sidewinder)   -  CentOS 6.9       -  Supported in the 6.9 branch
     Rocks 6.2 (Sidewinder)   -  CentOS 6.8       -  Supported in the 6.8 branch
