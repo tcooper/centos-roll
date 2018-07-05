@@ -1,7 +1,0 @@
-<roll name="Updates-CentOS" interface="4.0">
-	<timestamp time="18:28:35" date="Oct 02 2017" tz="PDT"/>
-	<color edge="lawngreen" node="lawngreen"/>
-	<info version="6.9" release="2017.10.02" arch="x86_64"/>
-	<iso maxsize="0" bootable="0" mkisofs=""/>
-	<rpm rolls="0" bin="1" src="0"/>/
-</roll>

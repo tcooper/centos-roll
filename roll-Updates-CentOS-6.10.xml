@@ -1,0 +1,7 @@
+<roll name="Updates-CentOS-6.10" interface="4.0">
+	<timestamp time="18:52:34" date="Jul 04 2018" tz="PDT"/>
+	<color edge="lawngreen" node="lawngreen"/>
+	<info version="2018.07.04" release="0" arch="x86_64"/>
+	<iso maxsize="0" bootable="0" mkisofs=""/>
+	<rpm rolls="0" bin="1" src="0"/>/
+</roll>
