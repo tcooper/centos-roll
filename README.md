@@ -7,19 +7,26 @@ CentOS release and updates repository that you choose.
 
 ## Versions Supported
 
-Each release of Rocks is targeted at a specific version of CentOS. The
-following table illustrates the association of the recent Rocks/CentOS
+Each release of Rocks is targeted at a specific version of CentOS.
+
+Updating the installed version of CentOS in a specific version of Rocks
+is possible but **may** cause issues. This roll **does not** address these
+issues and merely provides a mechanism to build Rocks compatible rolls.
+
+The following table illustrates the association of the recent Rocks/CentOS
 releases and whether (or not) building CentOS/Updates-CentOS ISOs for that
 version of Rocks is supported by this repository...
 
 ```
+    Rocks 7.0 (Manzanita)    -  CentOS 7.6.1810  -  Supported in the 7.6.1810 branch
     Rocks 7.0 (Manzanita)    -  CentOS 7.5.1804  -  Supported in the 7.5.1804 branch
-    Rocks 7.0 (Manzanita)    -  CentOS 7.4.1708  -  Supported in the 7.4.1708 branch
+    Rocks 7.0 (Manzanita)    -  CentOS 7.4.1708  -  Supported in the 7.4.1708 branch  (default)
+    Rocks 6.2 (Sidewinder)   -  CentOS 6.10      -  Supported in the 6.10 branch
     Rocks 6.2 (Sidewinder)   -  CentOS 6.9       -  Supported in the 6.9 branch
     Rocks 6.2 (Sidewinder)   -  CentOS 6.8       -  Supported in the 6.8 branch
-    Rocks 6.2 (Sidewinder)   -  CentOS 6.7       -  Supported in the 6.7 branch
-    Rocks 6.2 (Sidewinder)   -  CentOS 6.6       -  Supported in the 6.6 branch
-    Rocks 6.1.1 (Sand Boa)   -  CentOS 6.5       -  Supported in the 6.5 branch
+    Rocks 6.2 (Sidewinder)   -  CentOS 6.7       -  Supported in the 6.7 branch 
+    Rocks 6.2 (Sidewinder)   -  CentOS 6.6       -  Supported in the 6.6 branch  (default)
+    Rocks 6.1.1 (Sand Boa)   -  CentOS 6.5       -  Supported in the 6.5 branch  (default)
     Rocks 6.1 (Emerald Boa)  -  CentOS 6.4       -  Unsupported
 ```
 
