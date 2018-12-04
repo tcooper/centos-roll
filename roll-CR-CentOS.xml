@@ -1,7 +1,0 @@
-<roll name="CR-CentOS" interface="4.0">
-	<timestamp time="15:09:43" date="May 15 2018" tz="PDT"/>
-	<color edge="lawngreen" node="lawngreen"/>
-	<info version="7.5.1804" release="2018.05.15" arch="x86_64"/>
-	<iso maxsize="0" bootable="0" mkisofs=""/>
-	<rpm rolls="0" bin="1" src="0"/>/
-</roll>

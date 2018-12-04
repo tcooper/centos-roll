@@ -43,5 +43,5 @@ installupdates: cleanupdates mirrorupdates
 
 testing:
 	echo "arch is " $(ARCH)
-	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-5.1804.el7.centos.x86_64.rpm
-	curl -I $(MIRRORURL)/$(UPDATESPATH)/java-1.8.0-openjdk-1.8.0.171-7.b10.el7.x86_64.rpm
+	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-6.1810.2.el7.centos.x86_64.rpm
+	curl -I $(MIRRORURL)/$(UPDATESPATH)/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64.rpm
