@@ -1,7 +1,7 @@
 <roll name="Updates-CentOS-6.10" interface="4.0">
-	<timestamp time="15:09:17" date="May 06 2019" tz="PDT"/>
+	<timestamp time="16:37:59" date="May 20 2019" tz="PDT"/>
 	<color edge="lawngreen" node="lawngreen"/>
-	<info version="2019.05.06" release="0" arch="x86_64"/>
+	<info version="2019.05.20" release="0" arch="x86_64"/>
 	<iso maxsize="0" bootable="0" mkisofs=""/>
 	<rpm rolls="0" bin="1" src="0"/>/
 </roll>
