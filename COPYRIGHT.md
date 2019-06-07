@@ -1,12 +1,13 @@
 # COPYRIGHT
 
 ```
-# 
-# 				Rocks(r)
-# 		         www.rocksclusters.org
-# 		         version 6.2 (SideWinder)
-# 
-# Copyright (c) 2000 - 2014 The Regents of the University of California.
+#
+#                                 Rocks(r)
+#                          www.rocksclusters.org
+#                          version 6.2 (SideWinder)
+#                          version 7.0 (Manzanita)
+#
+# Copyright (c) 2000 - 2017 The Regents of the University of California.
 # All rights reserved.	
 # 
 # Redistribution and use in source and binary forms, with or without
