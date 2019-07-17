@@ -1,5 +1,7 @@
 include version.mk
 
+MTIME_VAL=7
+
 default: mirrorupdates
 
 # Create the Base OS Roll
@@ -33,7 +35,7 @@ installupdates: cleanupdates mirrorupdates
 
 # Check for new RPMs
 newrpms:
-	find . -name *.rpm -mtime -1 | xargs rpm -q --qf %{NAME}\\n -p | sort -u | column -c 120
+	find . -name *.rpm -mtime -$(MTIME_VAL) | xargs rpm -q --qf %{NAME}\\n -p | sort -u | column -c 120
 
 testing:
 	echo "arch is " $(ARCH)
