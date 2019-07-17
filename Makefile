@@ -41,6 +41,10 @@ installupdates: cleanupdates mirrorupdates
 	/opt/rocks/bin/rocks enable roll Updates-$(DISTRO)-$(VERSION)
 	-/sbin/service httpd start
 
+# Check for new RPMs
+newrpms:
+	  find . -name *.rpm -mtime -1 | xargs rpm -q --qf %{NAME}\\n -p | sort -u | column -c 120
+
 testing:
 	echo "arch is " $(ARCH)
 	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-6.1810.2.el7.centos.x86_64.rpm
