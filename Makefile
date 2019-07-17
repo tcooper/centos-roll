@@ -31,6 +31,10 @@ installupdates: cleanupdates mirrorupdates
 	/opt/rocks/bin/rocks enable roll Updates-$(DISTRO)-$(VERSION)
 	-/sbin/service httpd start
 
+# Check for new RPMs
+newrpms:
+	find . -name *.rpm -mtime -1 | xargs rpm -q --qf %{NAME}\\n -p | sort -u | column -c 120
+
 testing:
 	echo "arch is " $(ARCH)
 	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-6-10.el6.centos.12.3.x86_64.rpm
