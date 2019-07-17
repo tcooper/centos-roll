@@ -1,4 +1,6 @@
 *.iso
+mirror.centos.org
 mirror.hmc.edu
 mirrors.ocf.berkeley.edu
+mirrors.mit.edu
 vault.centos.org
