@@ -1,6 +1,8 @@
 include version.mk
 
-default: mirrorupdatesrocks7
+default: testing mirrorupdatesrocks7
+
+MTIME_VAL=7
 
 # Create the Base OS Roll
 mirrorbase:
@@ -15,24 +17,24 @@ installbase: mirrorbase
 
 # Mirror Updates
 mirrorupdates: 
-	- /bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
+	-/bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
 	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO) version=$(VERSION) release=$(DATE)
 
 # Mirror Updates Rocks7 Style
 mirrorupdatesrocks7:
-	- /bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
+	-/bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
 	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO)-$(VERSION) version=$(DATE) release=0
 
 # Mirror CR
 mirrorcr: 
-	- /bin/rm CR-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
+	-/bin/rm CR-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
 	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(CRPATH) arch=$(ARCH) rollname=CR-$(DISTRO) version=$(VERSION) release=$(DATE)
 
 # Remove All Previous Updates Rolls
 cleanupdates:
-	- /sbin/service httpd stop
-	- /opt/rocks/bin/rocks remove roll Updates-$(DISTRO)-$(VERSION) arch=$(ARCH)
-	- /sbin/service httpd start
+	-/sbin/service httpd stop
+	-/opt/rocks/bin/rocks remove roll Updates-$(DISTRO)-$(VERSION) arch=$(ARCH)
+	-/sbin/service httpd start
 
 # Add updates to distro
 installupdates: cleanupdates mirrorupdates
@@ -43,9 +45,9 @@ installupdates: cleanupdates mirrorupdates
 
 # Check for new RPMs
 newrpms:
-	  find . -name *.rpm -mtime -1 | xargs rpm -q --qf %{NAME}\\n -p | sort -u | column -c 120
+	  find . -name *.rpm -mtime -$(MTIME_VAL) | xargs rpm -q --qf %{NAME}\\n -p | sort -u | column -c 120
 
 testing:
 	echo "arch is " $(ARCH)
-	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-6.1810.2.el7.centos.x86_64.rpm
-	curl -I $(MIRRORURL)/$(UPDATESPATH)/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64.rpm
+	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-7.1908.0.el7.centos.x86_64.rpm
+	curl -I $(MIRRORURL)/$(UPDATESPATH)/java-1.8.0-openjdk-1.8.0.222.b10-1.el7_7.x86_64.rpm
