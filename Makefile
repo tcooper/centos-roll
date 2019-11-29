@@ -14,7 +14,6 @@ installbase: mirrorbase
 	/opt/rocks/bin/rocks add roll $(DISTRO)-$(VERSION)-*.iso
 	/opt/rocks/bin/rocks enable roll $(DISTRO)-$(VERSION)
 	/sbin/service httpd start
-
 # Mirror Updates
 mirrorupdates: 
 	-/bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
@@ -24,6 +23,16 @@ mirrorupdates:
 mirrorupdatesrocks7:
 	-/bin/rm Updates-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
 	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(UPDATESPATH) arch=$(ARCH) rollname=Updates-$(DISTRO)-$(VERSION) version=$(DATE) release=0
+
+# Mirror PowerTools Rocks7 Style
+mirrorpowertoolsrocks7:
+	-/bin/rm PowerTools-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
+	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(POWERTOOLSPATH) arch=$(ARCH) rollname=PowerTools-$(DISTRO)-$(VERSION) version=$(DATE) release=0
+
+# Mirror AppStream Rocks7 Style
+mirrorappstreamrocks7:
+	-/bin/rm AppStream-$(DISTRO)-$(VERSION)-*.$(ARCH).*.iso
+	/opt/rocks/bin/rocks create mirror $(MIRRORURL)/$(APPSTREAMPATH) arch=$(ARCH) rollname=AppStream-$(DISTRO)-$(VERSION) version=$(DATE) release=0
 
 # Mirror CR
 mirrorcr: 
@@ -49,5 +58,7 @@ newrpms:
 
 testing:
 	echo "arch is " $(ARCH)
-	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-7.1908.0.el7.centos.x86_64.rpm
-	curl -I $(MIRRORURL)/$(UPDATESPATH)/java-1.8.0-openjdk-1.8.0.222.b10-1.el7_7.x86_64.rpm
+	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-8.0-0.1905.0.9.el8.x86_64.rpm
+#	curl -I $(MIRRORURL)/$(UPDATESPATH)/<add_full_rpm_name_when_update_arrives>
+	curl -I $(MIRRORURL)/$(POWERTOOLSPATH)/CUnit-devel-2.1.3-17.el8.x86_64.rpm
+	curl -I $(MIRRORURL)/$(APPSTREAMPATH)/appstream-data-8-20180721.el8.noarch.rpm
