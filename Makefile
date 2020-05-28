@@ -45,9 +45,9 @@ installupdates: cleanupdates mirrorupdates
 
 # Check for new RPMs
 newrpms:
-	  find . -name *.rpm -mtime -$(MTIME_VAL) | xargs rpm -q --qf %{NAME}\\n -p | sort -u | column -c 120
+	find . -name *.rpm -mtime -$(MTIME_VAL) | xargs rpm -q --qf %{NAME}\\n -p | sort -u | column -c 120
 
 testing:
 	echo "arch is " $(ARCH)
-	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-7.1908.0.el7.centos.x86_64.rpm
-	curl -I $(MIRRORURL)/$(UPDATESPATH)/java-1.8.0-openjdk-1.8.0.222.b10-1.el7_7.x86_64.rpm
+	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-8.2003.0.el7.centos.x86_64.rpm
+	curl -I $(MIRRORURL)/$(UPDATESPATH)/bind-9.11.4-16.P2.el7_8.2.x86_64.rpm
