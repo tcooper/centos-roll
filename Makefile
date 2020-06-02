@@ -47,6 +47,11 @@ installupdates: cleanupdates mirrorupdates
 newrpms:
 	find . -name *.rpm -mtime -$(MTIME_VAL) | xargs rpm -q --qf %{NAME}\\n -p | sort -u | column -c 120
 
+# Upload ISO to Lustre
+upload:
+	rsync -avz *.iso oasis-dm-interactive.sdsc.edu:/oasis/projects/nsf/sys200/tcooper/rolls/$(DISTRO)/$(VERSION)/
+
+#
 testing:
 	echo "arch is " $(ARCH)
 	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-8.2003.0.el7.centos.x86_64.rpm
