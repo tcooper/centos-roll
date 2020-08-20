@@ -1,7 +1,7 @@
 <roll name="Updates-CentOS-7.8.2003" interface="4.0">
-	<timestamp time="11:02:10" date="May 28 2020" tz="PDT"/>
+	<timestamp time="09:46:50" date="Aug 20 2020" tz="PDT"/>
 	<color edge="lawngreen" node="lawngreen"/>
-	<info version="2020.05.28" release="0" arch="x86_64"/>
+	<info version="2020.08.20" release="0" arch="x86_64"/>
 	<iso maxsize="0" bootable="0" mkisofs=""/>
 	<rpm rolls="0" bin="1" src="0"/>/
 </roll>
