@@ -54,5 +54,5 @@ upload:
 #
 testing:
 	echo "arch is " $(ARCH)
-	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-8.2003.0.el7.centos.x86_64.rpm
-	curl -I $(MIRRORURL)/$(UPDATESPATH)/bind-9.11.4-16.P2.el7_8.2.x86_64.rpm
+	curl -I $(MIRRORURL)/$(BASEPATH)/centos-release-7-9.2009.0.el7.centos.x86_64.rpm
+	curl -I $(MIRRORURL)/$(UPDATESPATH)/bind-9.11.4-26.P2.el7_9.2.x86_64.rpm

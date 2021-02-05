@@ -1,7 +1,7 @@
 <roll name="CentOS" interface="4.0">
-	<timestamp time="15:45:56" date="Apr 27 2020" tz="PDT"/>
+	<timestamp time="12:23:14" date="Feb 04 2021" tz="PST"/>
 	<color edge="lawngreen" node="lawngreen"/>
-	<info version="7.8.2003" release="2020.04.27" arch="x86_64"/>
+	<info version="7.9.2009" release="2021.02.04" arch="x86_64"/>
 	<iso maxsize="0" bootable="0" mkisofs=""/>
 	<rpm rolls="0" bin="1" src="0"/>/
 </roll>
